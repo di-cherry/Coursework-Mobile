@@ -43,9 +43,18 @@ class PreviewActivity : AppCompatActivity() {
         btnSize = findViewById(R.id.btnSize)
 
         val prefs = getSharedPreferences("settings", MODE_PRIVATE)
-
         val wallpaperRes = prefs.getInt("selectedWallpaper", R.drawable.sample_preview)
         imgBackground.setImageResource(wallpaperRes)
+
+        val showClock = prefs.getBoolean("showClock", true)
+        val showWeather = prefs.getBoolean("showWeather", false)
+        val showNotes = prefs.getBoolean("showNotes", false)
+        val showCalendar = prefs.getBoolean("showCalendar", false)
+
+        if (showClock) addClockWidget()
+        if (showWeather) addWeatherWidget()
+        if (showNotes) addNotesWidget()
+        if (showCalendar) addCalendarWidget()
 
         btnAdd.setOnClickListener { showAddDialog() }
         btnDelete.setOnClickListener { removeSelectedView() }
