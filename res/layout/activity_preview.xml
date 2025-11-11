@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/previewRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tvClock"
+        android:text="12:45"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvWeather"
+        android:text="☀ 24°C, ясно"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/tvClock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/etNote"
+        android:hint="Моя заметка..."
+        android:textColorHint="#80FFFFFF"
+        android:textColor="@android:color/white"
+        android:background="#40000000"
+        android:padding="8dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+    <Button
+        android:id="@+id/btnColor"
+        android:text="Изменить цвет текста"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnBack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+    <Button
+        android:id="@+id/btnBack"
+        android:text="Назад"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+</RelativeLayout>
