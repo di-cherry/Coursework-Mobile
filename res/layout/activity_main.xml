@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="@drawable/bg_main"
+    tools:context=".MainActivity">
+
+    <!-- 🔹 Заголовок приложения -->
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WallCustomizer"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 🔹 Логотип приложения (опционально) -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="App Logo" />
+
+    <!-- 🔹 Кнопка: Выбор обоев -->
+    <Button
+        android:id="@+id/btnWallpapers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выбрать обои"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 🔹 Кнопка: Кастомизация виджетов -->
+    <Button
+        android:id="@+id/btnWidgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Кастомизация виджетов"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 🔹 Кнопка: Предпросмотр -->
+    <Button
+        android:id="@+id/btnPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Предпросмотр"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:backgroundTint="@color/black"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 🔹 Разделитель -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40FFFFFF"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 🔹 Текст о версии / подпись -->
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="v1.0.0"
+        android:textColor="#B3FFFFFF"
+        android:textSize="12sp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
