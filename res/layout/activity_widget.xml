@@ -1,0 +1,50 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:text="Настройка виджетов"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Цвет -->
+        <TextView android:text="Цвет текста:" />
+        <Spinner
+            android:id="@+id/spinnerColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Размер -->
+        <TextView android:text="Размер текста:" />
+        <SeekBar
+            android:id="@+id/seekTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="72"
+            android:progress="48"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 🪶 Шрифт -->
+        <TextView android:text="Шрифт:" />
+        <Spinner
+            android:id="@+id/spinnerFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnApplyWidget"
+            android:text="Сохранить настройки"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
