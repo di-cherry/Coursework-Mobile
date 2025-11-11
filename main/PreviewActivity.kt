@@ -42,7 +42,10 @@ class PreviewActivity : AppCompatActivity() {
         btnFont = findViewById(R.id.btnFont)
         btnSize = findViewById(R.id.btnSize)
 
-        imgBackground.setImageResource(prefs.getInt("selectedWallpaper", R.drawable.sample_preview))
+        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
+
+        val wallpaperRes = prefs.getInt("selectedWallpaper", R.drawable.sample_preview)
+        imgBackground.setImageResource(wallpaperRes)
 
         btnAdd.setOnClickListener { showAddDialog() }
         btnDelete.setOnClickListener { removeSelectedView() }
