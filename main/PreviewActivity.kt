@@ -43,7 +43,7 @@ class PreviewActivity : AppCompatActivity() {
         btnSize = findViewById(R.id.btnSize)
 
         val prefs = getSharedPreferences("settings", MODE_PRIVATE)
-        val wallpaperRes = prefs.getInt("selectedWallpaper", R.drawable.sample_preview)
+        val wallpaperRes = prefs.getInt("selectedWallpaper", R.drawable.wall1)
         imgBackground.setImageResource(wallpaperRes)
 
         val showClock = prefs.getBoolean("showClock", true)
