@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WallCustomizer</string>
+    <string name="choose_wallpaper">Выбрать обои</string>
+    <string name="customize_widget">Кастомизация виджетов</string>
+    <string name="preview">Предпросмотр</string>
+    <string name="apply_settings">Применить настройки</string>
+    <string name="version_label">v1.0.0</string>
+</resources>
