@@ -1,50 +1,57 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:background="@color/background">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:text="Выберите виджеты"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:paddingBottom="16dp" />
 
-        <TextView
-            android:text="Настройка виджетов"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
+    <CheckBox
+        android:id="@+id/cbClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Часы"
+        android:textColor="@android:color/white"
+        android:checked="true" />
 
-        <!-- Цвет -->
-        <TextView android:text="Цвет текста:" />
-        <Spinner
-            android:id="@+id/spinnerColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+    <CheckBox
+        android:id="@+id/cbWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Погода"
+        android:textColor="@android:color/white" />
 
-        <!-- Размер -->
-        <TextView android:text="Размер текста:" />
-        <SeekBar
-            android:id="@+id/seekTextSize"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="72"
-            android:progress="48"
-            android:layout_marginBottom="16dp" />
+    <CheckBox
+        android:id="@+id/cbNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Заметка"
+        android:textColor="@android:color/white" />
 
-        <!-- 🪶 Шрифт -->
-        <TextView android:text="Шрифт:" />
-        <Spinner
-            android:id="@+id/spinnerFont"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp" />
+    <CheckBox
+        android:id="@+id/cbCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Календарь"
+        android:textColor="@android:color/white" />
 
-        <Button
-            android:id="@+id/btnApplyWidget"
-            android:text="Сохранить настройки"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-</ScrollView>
+    <Button
+        android:id="@+id/btnSaveWidgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white" />
+</LinearLayout>
